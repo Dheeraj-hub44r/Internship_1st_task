@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Form </title>
+  <title>Form</title>
 </head>
 <body>
   <h1><ins>Form Page</ins></h1>
@@ -12,7 +12,7 @@
     <button type="submit">Login</button>
   </form>
 
-  <p id="message" style="color: black;"></p>
+  <p id="message" style="color:red;"></p>
 
   <script>
     var form = document.getElementById("myForm");
@@ -20,19 +20,15 @@
     var password = document.getElementById("password");
     var message = document.getElementById("message");
 
-    form.addEventListener("submit")
-    
-    function event() {
+    form.addEventListener("submit", function(event) {
       event.preventDefault();
 
       if(username.value === "" || password.value === "") {
         message.innerHTML = "All fields are required!";
-      }else if(password.value.lenght<6){
-        message.innerHTML="paasword must br at least 6 characters!";
       } else {
         message.innerHTML = "Login successful!";
       }
-    };
+    });
   </script>
 
 </body>
