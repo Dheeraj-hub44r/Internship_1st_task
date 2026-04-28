@@ -21,16 +21,15 @@
   <p id="message"></p>
 
   <script>
-    let form = document.getElementById("loginForm");   //accessing the elements
+    let form = document.getElementById("loginForm");  
     let username = document.getElementById("username");
     let password = document.getElementById("password");
     let message = document.getElementById("message");
 
-    form.addEventListener("submit", function(e) { // we place the function(e) inside the event to run the fucntion when the event is happens.
-                                                  //and if we use fucntion(e) iside the event, so we dont actually have to call the function atlast.
-
-      e.preventDefault(); //it stops the page from refreshing...
-
+    form.addEventListener("submit", function(e) { 
+      
+      e.preventDefault();
+      
       if(username.value === "" || password.value === "") {
         message.innerHTML = "All fields are required!";
       }
